@@ -10,6 +10,7 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "types:check": "tsc --noEmit --incremental false",
+    "commit": "git-cz",
     "prepare": "husky install"
   },
   "dependencies": {

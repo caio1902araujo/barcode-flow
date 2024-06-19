@@ -13,6 +13,36 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        background: " var(--background)",
+        foreground: " var(--foreground)",
+        muted: {
+          DEFAULT: " var(--muted)",
+          foreground: " var(--muted-foreground)",
+        },
+        popover: {
+          DEFAULT: " var(--popover)",
+          foreground: " var(--popover-foreground)",
+        },
+        card: {
+          DEFAULT: " var(--card)",
+          foreground: " var(--card-foreground)",
+        },
+        border: " var(--border)",
+        input: "var(--input)",
+        primary: {
+          primary: "var(--primary)",
+          foreground: "var(--primary-foreground)",
+        },
+        secondary: "var(--secondary)",
+        accent: {
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
+        },
+        success: "var(--success)",
+        destructive: "var(--destructive)",
+        ring: "var(--ring)",
+      },
     },
   },
   plugins: [],

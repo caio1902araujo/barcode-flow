@@ -26,7 +26,7 @@ const config: Config = {
         border: " var(--border)",
         input: "var(--input)",
         primary: {
-          primary: "var(--primary)",
+          DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
         },
         secondary: "var(--secondary)",
@@ -37,6 +37,9 @@ const config: Config = {
         success: "var(--success)",
         destructive: "var(--destructive)",
         ring: "var(--ring)",
+      },
+      borderRadius: {
+        sm: "4px",
       },
     },
   },

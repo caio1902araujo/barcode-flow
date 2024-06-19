@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <p>Geração de barcode</p>
     </main>
   );

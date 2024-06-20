@@ -16,11 +16,8 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
-
     "lucide-react": "^0.395.0",
-
     "@radix-ui/react-tabs": "^1.1.0",
-
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
@@ -62,7 +59,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "@commitlint/cz-commitlint"
     }
   }
 }

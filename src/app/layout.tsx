@@ -5,7 +5,7 @@ import "~/styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BarcodeFlow",
+  title: "Barcode Flow",
   description: "Site para geração de barcodess",
 };
 

@@ -14,11 +14,17 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+
+    "lucide-react": "^0.395.0",
+
     "@radix-ui/react-tabs": "^1.1.0",
+
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

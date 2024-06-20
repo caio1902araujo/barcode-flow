@@ -45,11 +45,6 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"

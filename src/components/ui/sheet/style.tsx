@@ -7,6 +7,7 @@ export const SheetStyles = tv({
     close:
       "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary",
     icon: "h-4 w-4",
+    header: "flex flex-col space-y-2 text-center sm:text-left",
     content:
       "fixed z-50 gap-4 bg-background p-6 shadow-lg overflow-y-auto transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 sm:p-4",
   },
@@ -32,4 +33,4 @@ export const SheetStyles = tv({
   },
 });
 
-export const { close, content, icon, overlay } = SheetStyles();
+export const { close, content, header, icon, overlay } = SheetStyles();

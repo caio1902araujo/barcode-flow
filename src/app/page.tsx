@@ -2,6 +2,7 @@ import {
   Sheet,
   SheetContent,
   SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "~/components/ui/sheet";
 
@@ -11,7 +12,9 @@ export default function Home() {
       <Sheet>
         <SheetTrigger>open</SheetTrigger>
         <SheetContent>
-          <SheetHeader>Sheet</SheetHeader>
+          <SheetHeader>
+            <SheetTitle>Título</SheetTitle>
+          </SheetHeader>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
             pariatur porro, quae accusantium corrupti quibusdam sed saepe nisi

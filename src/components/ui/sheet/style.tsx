@@ -9,6 +9,7 @@ export const SheetStyles = tv({
     icon: "h-4 w-4",
     header: "flex flex-col space-y-2 text-center sm:text-left",
     title: "text-lg font-semibold text-foreground",
+    description: "text-sm text-muted-foreground",
     content:
       "fixed z-50 gap-4 bg-background p-6 shadow-lg overflow-y-auto transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 sm:p-4",
   },
@@ -34,4 +35,5 @@ export const SheetStyles = tv({
   },
 });
 
-export const { close, content, header, title, icon, overlay } = SheetStyles();
+export const { close, content, header, title, description, icon, overlay } =
+  SheetStyles();

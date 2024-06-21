@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Portal as PortalPrimitive,
   Close as ClosePrimitive,

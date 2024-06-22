@@ -1,3 +1,5 @@
+import { Input } from "~/components/ui/input.tsx";
+
 export default function Home() {
   return (
     <main>

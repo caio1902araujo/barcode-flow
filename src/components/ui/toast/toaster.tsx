@@ -1,10 +1,10 @@
 "use client";
 
+import { ToastProvider } from "./provider";
 import {
   Toast,
   ToastClose,
   ToastDescription,
-  ToastProvider,
   ToastTitle,
   ToastViewport,
 } from "./toast";

@@ -10,8 +10,8 @@ export default function Home() {
       <Button
         onClick={() => {
           toast({
-            title: "aaaa",
-            description: "aaaa",
+            title: "Sucesso",
+            description: "C[odigo gerado com sucesso!",
           });
         }}
       >

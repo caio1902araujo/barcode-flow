@@ -1,9 +1,10 @@
 "use client";
 
 import { ToastClose } from "./close";
+import { ToastDescription } from "./description";
 import ToastProvider from "./provider";
 import { ToastTitle } from "./title";
-import { Toast, ToastDescription } from "./toast";
+import { Toast } from "./root";
 import { useToast } from "./use-toast";
 import { ToastViewport } from "./viewport";
 

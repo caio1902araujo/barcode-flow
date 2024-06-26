@@ -1,3 +1,5 @@
 import { Provider } from "@radix-ui/react-toast";
 
-export const ToastProvider = Provider;
+const ToastProvider = Provider;
+
+export default ToastProvider;

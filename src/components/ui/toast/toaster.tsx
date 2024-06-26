@@ -1,14 +1,9 @@
 "use client";
 
-import { ToastProvider } from "./provider";
-import {
-  Toast,
-  ToastClose,
-  ToastDescription,
-  ToastTitle,
-  ToastViewport,
-} from "./toast";
+import ToastProvider from "./provider";
+import { Toast, ToastClose, ToastDescription, ToastTitle } from "./toast";
 import { useToast } from "./use-toast";
+import { ToastViewport } from "./viewport";
 
 export function Toaster() {
   const { toasts } = useToast();

@@ -2,7 +2,8 @@
 
 import { ToastClose } from "./close";
 import ToastProvider from "./provider";
-import { Toast, ToastDescription, ToastTitle } from "./toast";
+import { ToastTitle } from "./title";
+import { Toast, ToastDescription } from "./toast";
 import { useToast } from "./use-toast";
 import { ToastViewport } from "./viewport";
 

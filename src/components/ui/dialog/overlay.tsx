@@ -2,7 +2,7 @@ import { Overlay } from "@radix-ui/react-dialog";
 import React from "react";
 import { overlay } from "./style";
 
-const DialogOverlay = React.forwardRef<
+export const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof Overlay>,
   React.ComponentPropsWithoutRef<typeof Overlay>
 >(({ className, ...props }, ref) => (

@@ -6,7 +6,7 @@ import { close, content } from "./style";
 import { DialogClose } from "./close";
 import { X } from "lucide-react";
 
-const DialogContent = React.forwardRef<
+export const DialogContent = React.forwardRef<
   React.ElementRef<typeof Content>,
   React.ComponentPropsWithoutRef<typeof Content>
 >(({ className, children, ...props }, ref) => (

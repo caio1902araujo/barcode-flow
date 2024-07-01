@@ -23,25 +23,4 @@ const ToggleGroup = React.forwardRef<
 
 ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
 
-const ToggleGroupItem = React.forwardRef<
-  React.ElementRef<typeof ToggleGroupPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &
-    VariantProps<typeof ToggleStyles>
->(({ className, children, variant, ...props }, ref) => {
-  // pass the variant
-  const context = useToggleGroup();
-
-  return (
-    <ToggleGroupPrimitive.Item
-      ref={ref}
-      className={item({ className, variant: context.variant ?? "default" })}
-      {...props}
-    >
-      {children}
-    </ToggleGroupPrimitive.Item>
-  );
-});
-
-ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
-
-export { ToggleGroup, ToggleGroupItem };
+export { ToggleGroup };

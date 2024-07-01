@@ -1,5 +1,6 @@
 import { Moon, Sun } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "~/components/ui/toggle";
+import ToggleTheme from "~/components/toggle-theme";
 
 export default function Home() {
   return (
@@ -7,14 +8,7 @@ export default function Home() {
       <p>Geração de barcode</p>
 
       <div className="flex items-center">
-        <ToggleGroup type="single">
-          <ToggleGroupItem value="bold" aria-label="Toggle bold">
-            <Sun className="h-4 w-4" />
-          </ToggleGroupItem>
-          <ToggleGroupItem value="italic" aria-label="Toggle italic">
-            <Moon className="h-4 w-4" />
-          </ToggleGroupItem>
-        </ToggleGroup>
+        <ToggleTheme />
       </div>
     </main>
   );

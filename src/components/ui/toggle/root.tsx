@@ -7,7 +7,7 @@ import { ToggleGroupProvider, useToggleGroup } from "~/contexts/toggle";
 import { ToggleStyles, item, root } from "./style";
 import { VariantProps } from "tailwind-variants";
 
-const ToggleGroup = React.forwardRef<
+export const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
     VariantProps<typeof ToggleStyles>
@@ -22,5 +22,3 @@ const ToggleGroup = React.forwardRef<
 ));
 
 ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
-
-export { ToggleGroup };

@@ -11,7 +11,7 @@ const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
     VariantProps<typeof ToggleStyles>
->(({ className, variant, children, ...props }, ref) => (
+>(({ className, variant = "default", children, ...props }, ref) => (
   <ToggleGroupPrimitive.Root
     ref={ref}
     className={root({ className, variant })}
@@ -30,10 +30,11 @@ const ToggleGroupItem = React.forwardRef<
 >(({ className, children, variant, ...props }, ref) => {
   // pass the variant
   const context = useToggleGroup();
+
   return (
     <ToggleGroupPrimitive.Item
       ref={ref}
-      className={item({ className })}
+      className={item({ className, variant: context.variant ?? "default" })}
       {...props}
     >
       {children}

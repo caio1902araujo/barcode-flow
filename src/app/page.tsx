@@ -1,6 +1,5 @@
 import { Moon, Sun } from "lucide-react";
-import { ToggleGroupItem } from "~/components/ui/toggle/item";
-import { ToggleGroup } from "~/components/ui/toggle/root";
+import { ToggleGroup, ToggleGroupItem } from "~/components/ui/toggle";
 
 export default function Home() {
   return (

@@ -2,11 +2,16 @@
 import { Moon, Sun } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle";
 
-const ToggleTheme = () => {
+interface ToggleThemeProps {
+  className?: string;
+}
+
+const ToggleTheme = ({ className }: ToggleThemeProps) => {
   return (
     <ToggleGroup
       type="single"
       onValueChange={(value) => alert(`SET ${value} THEME`)}
+      className={className}
     >
       <ToggleGroupItem value="light" aria-label="Toggle Light Theme">
         <Sun className="h-4 w-4" />

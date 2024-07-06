@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Header from "~/components/header";
 import { Toaster } from "~/components/ui/toast/toaster";
 import "~/styles/globals.css";
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Header />
         <Toaster />
         {children}
       </body>

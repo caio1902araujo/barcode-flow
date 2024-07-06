@@ -32,9 +32,11 @@ const Header = () => {
           <span className="cursor-pointer text-lg font-medium text-foreground">
             Gerador
           </span>
-          <span className="cursor-pointer text-lg text-muted-foreground hover:text-foreground">
-            Editor
-          </span>
+          <Link href="barcode/edit">
+            <span className="cursor-pointer text-lg text-muted-foreground hover:text-foreground">
+              Editor
+            </span>
+          </Link>
           <span className="cursor-pointer text-lg text-muted-foreground hover:text-foreground">
             Ajuda
           </span>

@@ -1,24 +1,33 @@
 "use client";
-import Image from "next/image";
-import FullLogo from "~/assets/full-logo.svg";
-import FullLogoLight from "~/assets/full-logo-light.svg";
-import Logo from "~/assets/logo.svg";
-import ToggleTheme from "./toggle-theme";
-import Link from "next/link";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 import { Menu } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import Link from "next/link";
+import FullLogoLight from "~/assets/full-logo-light.svg";
+import FullLogo from "~/assets/full-logo.svg";
+import ToggleTheme from "./toggle-theme";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   return (
     <header className="flex h-[90px] w-full items-center justify-between border-b-2 border-b-muted px-8 py-7 transition-colors md:px-24">
       <Link href="/">
-        <Image
-          src={theme === "light" ? FullLogo : FullLogoLight}
-          alt="Logo"
-          className="w-36 md:w-52"
-        />
+        {theme === "light" ? (
+          <Image src={FullLogo} alt="Logo" className="w-36 md:w-52" />
+        ) : (
+          <Image src={FullLogoLight} alt="Logo" className="w-36 md:w-52" />
+        )}
       </Link>
 
       <section className="flex items-center gap-8">

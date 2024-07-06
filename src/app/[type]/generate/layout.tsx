@@ -1,4 +1,6 @@
-const TypeLayout = ({
+import React from "react";
+
+const EditLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -6,4 +8,4 @@ const TypeLayout = ({
   return <>{children}</>;
 };
 
-export default TypeLayout;
+export default EditLayout;

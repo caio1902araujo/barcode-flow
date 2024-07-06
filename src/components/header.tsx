@@ -8,6 +8,36 @@ import FullLogo from "~/assets/full-logo.svg";
 import ToggleTheme from "./toggle-theme";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { match } from "path-to-regexp";
+interface LinkComponentProps {
+  title?: string;
+  path: string;
+  keyWord: string;
+}
+
+export const LinkComponent = ({ title, path, keyWord }: LinkComponentProps) => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Função de navegação
+  const handleNavigate = () => {
+    router.push(path);
+  };
+
+  const isActive = pathname.includes(keyWord);
+
+  return (
+    <span
+      onClick={handleNavigate}
+      className={`cursor-pointer text-lg hover:text-foreground ${
+        isActive ? "font-medium text-foreground" : "text-muted-foreground"
+      }`}
+    >
+      {title}
+    </span>
+  );
+};
 
 const Header = () => {
   const [currentLogo, setCurrentLogo] = useState(FullLogoLight);
@@ -23,23 +53,23 @@ const Header = () => {
 
   return (
     <header className="flex h-[90px] w-full items-center justify-between border-b-2 border-b-muted px-8 py-7 transition-colors md:px-24">
-      <Link href="/">
+      <Link href="/barcode">
         <Image src={currentLogo} alt="Logo" className="w-36 md:w-52" />
       </Link>
 
       <section className="flex items-center gap-8">
         <nav className="hidden items-center gap-6 sm:flex">
-          <span className="cursor-pointer text-lg font-medium text-foreground">
-            Gerador
-          </span>
-          <Link href="barcode/edit">
-            <span className="cursor-pointer text-lg text-muted-foreground hover:text-foreground">
-              Editor
-            </span>
-          </Link>
-          <span className="cursor-pointer text-lg text-muted-foreground hover:text-foreground">
-            Ajuda
-          </span>
+          <LinkComponent
+            keyWord="generate"
+            path="/barcode/generate"
+            title="Gerador"
+          />
+          <LinkComponent
+            keyWord="customize"
+            path="/barcode/customize"
+            title="Editor"
+          />
+          <LinkComponent keyWord="help" path="/help" title="Ajuda" />
         </nav>
 
         <div className="hidden sm:block">

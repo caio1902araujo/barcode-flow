@@ -10,24 +10,21 @@ import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-  const [mounted, setMounted] = useState(false);
+  const [currentLogo, setCurrentLogo] = useState(FullLogoLight);
   const { theme } = useTheme();
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    if (theme === "light") {
+      setCurrentLogo(FullLogo);
+    } else if (theme === "dark") {
+      setCurrentLogo(FullLogoLight);
+    }
+  }, [theme]);
 
-  if (!mounted) {
-    return null;
-  }
   return (
     <header className="flex h-[90px] w-full items-center justify-between border-b-2 border-b-muted px-8 py-7 transition-colors md:px-24">
       <Link href="/">
-        {theme === "light" ? (
-          <Image src={FullLogo} alt="Logo" className="w-36 md:w-52" />
-        ) : (
-          <Image src={FullLogoLight} alt="Logo" className="w-36 md:w-52" />
-        )}
+        <Image src={currentLogo} alt="Logo" className="w-36 md:w-52" />
       </Link>
 
       <section className="flex items-center gap-8">

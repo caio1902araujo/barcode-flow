@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const ToggleStyles = tv({
   slots: {
     root: "flex items-center justify-center transition-colors gap-1",
-    item: "rounded-sm text-sm font-medium ring-offset-background transition-colors hover:bg-background text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+    item: "rounded-sm text-sm font-medium ring-offset-background transition-colors hover:bg-background text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-background data-[state=on]:text-foreground",
   },
 
   variants: {

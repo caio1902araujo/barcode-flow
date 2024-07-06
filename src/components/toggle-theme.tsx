@@ -1,17 +1,17 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
-interface ToggleThemeProps {
-  className?: string;
-}
+const ToggleTheme = () => {
+  const { setTheme, theme } = useTheme();
 
-const ToggleTheme = ({ className }: ToggleThemeProps) => {
   return (
     <ToggleGroup
       type="single"
-      onValueChange={(value) => alert(`SET ${value} THEME`)}
-      className={className}
+      onValueChange={(value) => setTheme(value)}
+      className="gap-1"
     >
       <ToggleGroupItem value="light" aria-label="Toggle Light Theme">
         <Sun className="h-4 w-4" />

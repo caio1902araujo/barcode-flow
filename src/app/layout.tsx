@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import Header from "~/components/header";
 import { Toaster } from "~/components/ui/toast/toaster";
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <Toaster />
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <Header />
+          <Toaster />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

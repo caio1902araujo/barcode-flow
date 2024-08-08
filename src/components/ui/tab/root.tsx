@@ -1,9 +1,8 @@
-"use client";
 import { Root, TabsProps as RootProps } from "@radix-ui/react-tabs";
 import React from "react";
 import { VariantProps } from "tailwind-variants";
 import { TabsStyles } from "./styles";
-import { TabStylesContextProvider } from "~/contexts/tab-styles-context";
+import { TabStylesContextProvider } from "~/contexts/tab-styles";
 
 export interface TabsProps extends RootProps, VariantProps<typeof TabsStyles> {}
 

@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 import { Content } from "@radix-ui/react-tabs";
-import { useTabStyles } from "~/contexts/tab-styles-context";
+import { useTabStyles } from "~/contexts/tab-styles";
 
 export const TabsContent = React.forwardRef<
   React.ElementRef<typeof Content>,

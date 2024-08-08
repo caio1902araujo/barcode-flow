@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Trigger } from "@radix-ui/react-tabs";
-import { useTabStyles } from "~/contexts/tab-styles-context";
+import { useTabStyles } from "~/contexts/tab-styles";
 
 export const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof Trigger>,

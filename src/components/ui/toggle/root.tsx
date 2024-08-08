@@ -1,10 +1,8 @@
-"use client";
-
 import * as React from "react";
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
 
-import { ToggleGroupProvider, useToggleGroup } from "~/contexts/toggle";
-import { ToggleStyles, item, root } from "./style";
+import { ToggleGroupProvider } from "~/contexts/toggle";
+import { ToggleStyles, root } from "./style";
 import { VariantProps } from "tailwind-variants";
 
 export const ToggleGroup = React.forwardRef<

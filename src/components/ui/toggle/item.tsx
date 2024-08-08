@@ -1,4 +1,3 @@
-"use client";
 import { Item } from "@radix-ui/react-toggle-group";
 import { ToggleStyles, item } from "./style";
 import { VariantProps } from "tailwind-variants";
